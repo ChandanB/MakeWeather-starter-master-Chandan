@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F96C2331D93A06B00F9C12D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F96C2321D93A06B00F9C12D /* Main.storyboard */; };
+		1F1D79021D94FFF9006DA2C3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D79011D94FFF9006DA2C3 /* TableViewCell.swift */; };
+		1F1D79041D95020A006DA2C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F1D79031D95020A006DA2C3 /* Main.storyboard */; };
+		1F1D79081D95080A006DA2C3 /* ForecastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F1D79071D95080A006DA2C3 /* ForecastTableViewController.swift */; };
 		1F96C2351D93A12D00F9C12D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F96C2341D93A12D00F9C12D /* ViewController.swift */; };
 		558245EB1D90EEEF00827A1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558245EA1D90EEEF00827A1F /* AppDelegate.swift */; };
 		558245F21D90EEEF00827A1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 558245F11D90EEEF00827A1F /* Assets.xcassets */; };
@@ -15,7 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1F96C2321D93A06B00F9C12D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1F1D79011D94FFF9006DA2C3 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		1F1D79031D95020A006DA2C3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1F1D79071D95080A006DA2C3 /* ForecastTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForecastTableViewController.swift; sourceTree = "<group>"; };
 		1F96C2341D93A12D00F9C12D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3560820876E3BA1DBA2B6539 /* Pods-MakeWeather-starter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeWeather-starter.release.xcconfig"; path = "Pods/Target Support Files/Pods-MakeWeather-starter/Pods-MakeWeather-starter.release.xcconfig"; sourceTree = "<group>"; };
 		4A90C99B83B42705C3EA92E5 /* Pods-MakeWeather-starter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MakeWeather-starter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MakeWeather-starter/Pods-MakeWeather-starter.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,9 +79,11 @@
 			isa = PBXGroup;
 			children = (
 				558245EA1D90EEEF00827A1F /* AppDelegate.swift */,
-				558245F11D90EEEF00827A1F /* Assets.xcassets */,
+				1F1D79011D94FFF9006DA2C3 /* TableViewCell.swift */,
 				1F96C2341D93A12D00F9C12D /* ViewController.swift */,
-				1F96C2321D93A06B00F9C12D /* Main.storyboard */,
+				1F1D79071D95080A006DA2C3 /* ForecastTableViewController.swift */,
+				1F1D79031D95020A006DA2C3 /* Main.storyboard */,
+				558245F11D90EEEF00827A1F /* Assets.xcassets */,
 				558245F31D90EEEF00827A1F /* LaunchScreen.storyboard */,
 				558245F61D90EEEF00827A1F /* Info.plist */,
 			);
@@ -146,7 +152,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F96C2331D93A06B00F9C12D /* Main.storyboard in Resources */,
+				1F1D79041D95020A006DA2C3 /* Main.storyboard in Resources */,
 				558245F51D90EEEF00827A1F /* LaunchScreen.storyboard in Resources */,
 				558245F21D90EEEF00827A1F /* Assets.xcassets in Resources */,
 			);
@@ -208,6 +214,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F96C2351D93A12D00F9C12D /* ViewController.swift in Sources */,
+				1F1D79021D94FFF9006DA2C3 /* TableViewCell.swift in Sources */,
+				1F1D79081D95080A006DA2C3 /* ForecastTableViewController.swift in Sources */,
 				558245EB1D90EEEF00827A1F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
