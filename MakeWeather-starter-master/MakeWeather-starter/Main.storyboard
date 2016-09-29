@@ -41,7 +41,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3u-s8-8DQ">
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -54,7 +54,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="Cxw-ZV-bNz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -77,7 +77,7 @@
                                     <constraint firstAttribute="height" constant="58" id="Kkx-EC-Zuk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <state key="normal" title="10 Day Forecast">
+                                <state key="normal" title=" Forecast (10 Day)">
                                     <color key="titleColor" red="0.93087654565843747" green="0.93414852443990648" blue="0.94396446078431373" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
@@ -206,17 +206,9 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gr0-wc-f2Z">
-                                            <frame key="frameInset" minX="320" minY="8" width="36" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="TimeLabel" destination="gr0-wc-f2Z" id="MHy-01-65M"/>
                                     <outlet property="forecastHighestTemp" destination="dCG-VZ-yFl" id="xaK-Me-Pbm"/>
                                     <outlet property="forecastLowestTemp" destination="Vbk-xJ-TmI" id="6dN-ot-PGp"/>
                                     <outlet property="forecastSummaryLabel" destination="fA8-Fd-UyN" id="rxU-f3-ZIA"/>

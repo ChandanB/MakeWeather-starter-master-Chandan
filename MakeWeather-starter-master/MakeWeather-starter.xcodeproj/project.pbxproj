@@ -41,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F1D79091D9B4543006DA2C3 /* Forecast View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F1D79071D95080A006DA2C3 /* ForecastTableViewController.swift */,
+				1F1D79011D94FFF9006DA2C3 /* TableViewCell.swift */,
+			);
+			name = "Forecast View Controller";
+			sourceTree = "<group>";
+		};
 		26D6534577C5893ADF43F94E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,10 +87,9 @@
 		558245E91D90EEEF00827A1F /* MakeWeather-starter */ = {
 			isa = PBXGroup;
 			children = (
+				1F1D79091D9B4543006DA2C3 /* Forecast View Controller */,
 				558245EA1D90EEEF00827A1F /* AppDelegate.swift */,
-				1F1D79011D94FFF9006DA2C3 /* TableViewCell.swift */,
 				1F96C2341D93A12D00F9C12D /* ViewController.swift */,
-				1F1D79071D95080A006DA2C3 /* ForecastTableViewController.swift */,
 				1F1D79031D95020A006DA2C3 /* Main.storyboard */,
 				558245F11D90EEEF00827A1F /* Assets.xcassets */,
 				558245F31D90EEEF00827A1F /* LaunchScreen.storyboard */,

@@ -10,7 +10,7 @@ import UIKit
 import YWeatherAPI
 import CoreLocation
 
-class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDelegate, UINavigationBarDelegate, UINavigationControllerDelegate{
     
     //Country label is labeled as date label, needs fix
     
@@ -32,8 +32,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDe
         success: { (result: [AnyHashable: Any]?) in print(result) },
         failure: { (response: Any?, error: Error?) in print(error) })
         
-        
-     
+            
         dateLabel.text = ""
         summaryLabel.text = ""
         currentTemperatureLabel.text = "Hi!"
@@ -50,20 +49,16 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITextFieldDe
     @IBAction func getLocationAndDisplayData(_ sender: AnyObject) {
         
         YWeatherAPI.sharedManager().todaysForecast(forLocation: cityTextField.text,
-        success: { (result: [AnyHashable: Any]?) in print(result)
+        success: { (result: [AnyHashable: Any]?) in
             
-            print(result?["highTemperatureForDay"])
-            print(result?["lowTemperatureForDay"])
-            print(result?["highTemperatureForDay"])
-            
-           self.highestTempLabel.text = result?["highTemperatureForDay"] as? String
-           self.lowestTempLabel.text = result?["lowTemperatureForDay"] as? String
-           self.summaryLabel.text = result?["shortDescription"] as? String
-           self.currentTemperatureLabel.text = result?["region"] as? String
-            
+            if result != nil {
+            self.highestTempLabel.text = result?["highTemperatureForDay"] as? String
+            self.lowestTempLabel.text = result?["lowTemperatureForDay"] as? String
+            self.summaryLabel.text = result?["shortDescription"] as? String
+            self.currentTemperatureLabel.text = result?["region"] as? String
             self.dateLabel.text = result?["country"] as? String
-            }, failure: { (response: Any?, error: Error?) in print(error) })
+            }
+        }, failure: { (response: Any?, error: Error?) in print(error) })
     }
-    
 }
 

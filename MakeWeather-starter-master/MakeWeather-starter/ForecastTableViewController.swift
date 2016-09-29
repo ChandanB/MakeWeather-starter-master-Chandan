@@ -9,79 +9,39 @@
 import UIKit
 import YWeatherAPI
 
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-    switch (lhs, rhs) {
-    case let (l?, r?):
-        return l < r
-    case (nil, _?):
-        return true
-    default:
-        return false
-    }
-}
-
-fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-    switch (lhs, rhs) {
-    case let (l?, r?):
-        return l > r
-    default:
-        return rhs < lhs
-    }
-}
-
-
 class ForecastTableViewController: UITableViewController {
     
-    let cellId = "cellId"
+    var forecastData: [[String: Any]] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(TableViewCell.self, forCellReuseIdentifier: cellId)
-    
+        print("W")
+        YWeatherAPI.sharedManager().fiveDayForecast(forLocation: "San Francisco",success: { (result: [AnyHashable: Any]?) in print(result)
+            
+            let fiveDayForecastsArray = result!["fiveDayForecasts"] as! [[String: Any]]
+            self.forecastData = fiveDayForecastsArray
+            self.tableView.reloadData()
+            
+            }, failure: { (response: Any?, error: Error?) in print(error) })
+        
     }
     
-    //fileprivate func attemptReloadOfTable() {
-    //    self.timer?.invalidate()
-    //    self.timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(self.handleReloadTable), userInfo: nil, repeats: false)
-   // }
-    
-    var timer: Timer?
-
-   // override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! UserCell
-        
-        //let message = messages[(indexPath as NSIndexPath).row]
-       // cell.message = message
-        
-  //      return cell
-  //  }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return forecastData.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
